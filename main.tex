@@ -16,7 +16,7 @@
 \addtolength{\textheight}{1in}
 
 % Graphics
-\usepackage{graphicx}
+\usepackage{tikz, graphicx}
 \graphicspath{{figures/}}
 
 % Math
@@ -34,9 +34,6 @@
 \usepackage{lipsum}
 \usepackage{hyperref}
 
-
-
-
 %----------------------------------------------------------------------------------------
 %	MAIN PART
 %----------------------------------------------------------------------------------------
@@ -51,6 +48,11 @@
 \date{\today} % Date for the report
 
 \maketitle % Inserts the title, author and date
+
+% logo, absolute positioning
+\begin{tikzpicture}[remember picture,overlay,shift={(current page.north west)}]
+\node[anchor=north west,xshift=1cm,yshift=-0.5cm]{\includegraphics[width=4cm]{city-logo.jpg}};
+\end{tikzpicture}
 
 %----------------------------------------------------------------------------------------
 %	TODOS
