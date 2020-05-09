@@ -1,6 +1,6 @@
-%----------------------------------------------------------------------------------------
+%------------------
 %	PACKAGES AND DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+%------------------
 
 % Original template  https://www.overleaf.com/latex/templates/template-for-foundation-master-project-reports/dtzztzckwswh
 
@@ -22,6 +22,12 @@
 \usepackage{tikz, graphicx}
 \graphicspath{{figures/}}
 
+% Colours
+\usepackage{color, colortbl}
+
+% Figure wrapping
+\usepackage{wrapfig}
+
 % Math
 \usepackage{amssymb}
 \usepackage{amsmath} % Required for some math elements 
@@ -37,17 +43,25 @@
 \usepackage{lipsum}
 \usepackage{hyperref}
 
-%----------------------------------------------------------------------------------------
+% For ethics pdf form insertion
+% Will stitch online, better result
+% https://pdfjoiner.com/
+% \usepackage[final]{pdfpages}
+
+%------------------
 %	MAIN PART
-%----------------------------------------------------------------------------------------
+%------------------
 \begin{document}
 
 \title{%
-  RPMI Coursework Title - appropriate research question \\
-  \large Project proposal \\
-    Advisor: Dr Domain Expert \\
-    City, University of London}
-\author{Daniel Sikar - MSc Data Science PT2}
+  Evaluation of self-driving cars using CNNs in the rain \\
+  \medskip
+  \large INM363 Individual Project\\
+    Daniel Sikar - MSc Data Science PT2\\
+    Supervisor: Artur Garcez 
+    }
+% \author{Daniel Sikar - MSc Data Science PT2}
+% \date{\vspace{-5ex}} % get rid of date spacing
 \date{\today} % Date for the report
 
 \maketitle % Inserts the title, author and date
@@ -57,55 +71,67 @@
 \node[anchor=north west,xshift=1cm,yshift=-0.5cm]{\includegraphics[width=4cm]{city-logo.jpg}};
 \end{tikzpicture}
 
-%----------------------------------------------------------------------------------------
-%	TODOS
-%----------------------------------------------------------------------------------------
+%------------------
+%	PRIOR ART
+%------------------
 
-% \input{0.5-todos.tex}
+% We looked at all proposals made available and shortlisted 6; Atkins,
+% Dimmock, Manchev, Minah, Walters and Wells, and used these as 
+% references to style our own report
 
-%----------------------------------------------------------------------------------------
+%------------------
 %	INTRODUCTION
-%----------------------------------------------------------------------------------------
+%------------------
 
 \input{1-introduction.tex}
 
-%----------------------------------------------------------------------------------------
+%------------------
 %	CRITICAL CONTEXT 
-%----------------------------------------------------------------------------------------
+%------------------
 
 \input{2-critical-context.tex}
 
-%----------------------------------------------------------------------------------------
+%------------------
 %	METHODS AND APPROACHES 
-%----------------------------------------------------------------------------------------
+%------------------
 
 \input{3-methods-approaches.tex}
 
-%----------------------------------------------------------------------------------------
+%------------------
 %	WORK PLAN 
-%----------------------------------------------------------------------------------------
+%------------------
 
 \input{4-work-plan.tex}
 
-%----------------------------------------------------------------------------------------
+%------------------
 %	RISKS
-%----------------------------------------------------------------------------------------
+%------------------
 
 \input{5-risks.tex}
 
-%----------------------------------------------------------------------------------------
+%------------------
+%	RESEARCH ETHICS & PROFESSIONAL ISSUES
+%------------------
+
+\input{6-research-ethics-professional-issues.tex}
+
+%------------------
 %	REFERENCES
-%----------------------------------------------------------------------------------------
+%------------------
 
 % References in separate page
 \pagebreak
 \printbibliography
 \pagebreak
 
-%----------------------------------------------------------------------------------------
+%------------------
 %	RESEARCH ETHICS REVIEW FORM
-%----------------------------------------------------------------------------------------
+%------------------
 
-\input{6-research-ethics-review-form.tex}
+% Better results obtained using https://pdfjoiner.com/
+% join completed-ethics-form.pdf
+% \GitHub\msc-data-science\INM363-IndividualProjects\coursework
+
+% \includepdf[pages=-,pagecommand={},width=\linewidth]{ethics-form.pdf}
 
 \end{document}

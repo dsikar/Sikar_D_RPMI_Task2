@@ -1,40 +1,66 @@
+%% Mache
+
 \section{Introduction}
 
-Example of Harvard style citation, One smith said this \parencite{Smith:2013jd}, and the other smith said that \parencite{Smith:2012qr}.
+Land vehicles that can drive autonomously without human intervention, have shown increased research activity in the last 4 decades, harnessing the development in computer hardware, where decreasing size and increasing computational power allows such vehicles to carry mobile computing systems capable of performing the signal and algorithmic processing required to successfully self-drive along a path.
+  
+From the early Stanford Cart, a camera-equipped roving robot, with a remote time-sharing computer as its "brain", and "taking about five hours to navigate a 20 meter course" (\cite{3899}) to the current Tesla fleet with millions of accumulated self-driven miles (\cite{citation needed}). self-driving cars are an increasing presence on public roads. In California, self-driving buses have been in use since 2017 (\cite{Citation Needed}).
 
-Mark allocation, detail task description and proposal structure from
+Automakers such as Tesla, Nissan, Audi, General Motors, BMW, Ford, Honda, Toyota, Mercedes and Volkswagen, and technology companies such as Apple, Google, NVidia and Intel, are currently involved in research. (\cite{app10082749}).
 
-https://moodle.city.ac.uk/mod/page/view.php?id=1419253
-\subsection{Mark Allocation}
+Over time, dedicated self-driving compute platforms were developed by companies such as Intel subsidiary MobileEye, NVIDIA and Tesla. \cite{NVIDIA}. All three platforms have custom-designed processors, optimised for artificial intelligence (AI) computing, as well as dedicated inputs to process camera, radar (to measure object proximity with radio waves) and sonar (to measure object proximity with sound waves) data.
 
-i. \textbf{Introduction -- 15\%}
-
-\textit{show that you know what will be produced and why (as well as when and where) it is important}
-
-vi. \textbf{Presentation -- 10\%}
-
-\textit{use legible text and graphics, coherent arguments and appropriate structure}
-
-\subsection{Detail Task Description}
-
-i. identify an appropriate research question -which can be phrased as well as a main project objective- and
-
-ii. justify this with well informed and well-argued critical context;
-explain the purpose of the work, its objectives, the products that will be generated and the intended beneficiaries;
-
-ix. present the proposal with a coherent narrative in a clear, consistent and professional manner that exhibits good academic conduct and includes a comprehensive reference list. 
-
-\subsection{Proposal Structure} 
-
-Define the purpose of the work with a title, overall aims, and an unambiguous and answerable research question. Explain the products of the work and those who will benefit from it. Be sure that you define the project scope specifically.
-
-\textbf{Markers will look for the extent to which: the problem is defined, relevant and appropriate; objectives are stated, suitable and SMART; outputs and beneficiaries are defined and credible; scope is fully defined, realistic and understood.}
-
-\subsection{Presentation}
-
-The proposal must be presented professionally with legible text and graphics, coherent arguments and appropriate structure.
-
-Markers will look for the extent to which: the proposal is coherent, complete and legible; writing is fluent, concise and precise with a clear and persuasive narrative; arguments are supported by evidence and presented with consistency and clarity; referencing, citation, summarising, paraphrasing and use of quotations demonstrate best practice; opaque, repetitive or irrelevant text are avoided; the proposal is free of grammatical errors, inconsistencies and spelling mistakes;
+Elon Musk, co-founder and CEO of Tesla, with respect to self-driving cars states that  "(...) right now AI and Neural Nets are used really for object recognition (...), identifying objects in still frames and tying it together in a perception path planning layer thereafter. (...) Over time I would expect that it moves really to (...) video in, car steering and pedals out" (\cite{TESLAADE:2019}).
 
 
 
+
+NVIDIA DRIVE AGX self-driving compute platforms are built on NVIDIA Xavier™, the world’s first processor designed for autonomous driving. The auto-grade Xavier system-on-a-chip (SoC) is in production today and architected for safety, incorporating six different types of processors to run redundant and diverse algorithms for AI, sensor processing, mapping and driving. Leveraging Xavier, DRIVE AGX platforms process data from camera, lidar, radar, and ultrasonic sensors to understand the complete 360-degree environment in real-time, localize itself to a map, and plan a safe path forward.
+
+https://www.nvidia.com/en-gb/self-driving-cars/drive-platform/hardware/
+
+
+
+
+A Convolutional Neural Network (CNN) is a class of Artificial Neural Network (ANN) that has enjoyed recent success with state-of-the-art performance in tasks such as natural language processing (NLP), image classification. The alternative approach being networks that make use of feature engineering, also known as feature extraction, 
+
+\textbf{The purpose of the project is to determine...}  
+TODO add text to refer to what I intend to obtain from this work.
+
+Reliability under changing weather conditions is an issue that has been considered since the beginning of research on autonomous vehicles (\cite{3899}).  
+
+The introduction of representational learning by back-propagating errors (\cite{Rumelhart:1986we}) opened a whole new can of worms, and a few pandora boxes to go with it.
+
+The big game changer was this guy (\cite{Pomerleau93knowledge-basedtraining}) who did the business. But then he upped the game (\cite{6796843}). Then, Jesus Christ, Pomerleau wants to do it all on his on (\cite{Jochem-1996-16257}).
+
+But the "drive across America" did not actually use the end-to-end approach (\cite{528333}
+
+But then these NVIDIA guys (\cite{journals/corr/BojarskiTDFFGJM16}) really messed things up.
+
+There is a belief that self driving cars will be able to eventually generate a safer driving experience with respect to manually controlled cars by drunken humans on facebook. (\cite{Dingus201513271}).  
+
+The measure safety testing, such as rate of success/failure of our algorithm will be given by a method that we need to research (injuries/fatalities per miles). How many miles do we need to accumulate. These guys (Kalra, Nidhi and Susan M. Paddock, Driving to Safety:) offered some metrics.
+Here is the discussion:   
+How Many Miles of Driving Would It Take to Demonstrate Autonomous Vehicle Reliability?
+
+Then we can look at this stackoverflow discussion for some metrics:
+
+https://stats.stackexchange.com/questions/73645/how-do-you-derive-the-success-run-theorem-from-the-traditional-form-of-bayes-the
+
+Then specifically at Lecture 23 for 
+
+% youtube vid with some of previous references https://www.youtube.com/watch?v=yaYER2M8dcs
+% jupyter notebook with explainable graphs
+% https://github.com/stephencwelch/self_driving_cars
+% Miles required to validate model are computationally unfeasible to generate
+
+% end to end x semantic abstraction
+% corner events
+Also, it would be good to have some measure of explainability such as proposed by 
+\cite{Zeiler:2014}
+
+These guys looked at poisoning the data (\cite{bansal2018chauffeurnet}).
+
+\subsubsection{Introduction 2.0}
+
+%% Last Paragraph, what Elon Musk said

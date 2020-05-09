@@ -1,0 +1,11 @@
+%% \subsubsection{Evaluation}
+
+\subsection{Evaluation}
+
+\textbf{This paragraph might be best placed in methods section} Our data consists of videos, taken by cameras mounted on moving vehicles, which can be interpreted as sequences of still images taken at fixed-time intervals. Each still image is labelled with a quantity we call $\theta$, that represents a direction from 0 to 359 degrees, in which the vehicle was travelling at the moment the image was stored. $\Delta \theta$ between two images, taken at intervals $i$ and $i+n$, represents the amount of steering that was applied to the vehicle after n intervals. Therefore the assumption is we are dealing with a regression problem, where, given a sequence of images as described, we want to approximate $\theta$ to keep the autonomous vehicle on the road.
+
+
+Developing the evaluation metric is part of this project. We are specifically interested in the steering aspect, and how much error (oversteering or understeering) would define an accident.
+
+As such, the initial proposed evaluation metric is to, once the networks have been trained and tested on our original "dry" data, obtain a ground truth, where no accidents (autonomous vehicles driving off the road) are registered. We will then use our "rainy" and augmented data. The expectation is that at a given threshold, the autonomous network under test will output steering angles for a sufficient amount of frames that would cause the car to steer off the road.
+Once a few of these cases have been identified, the sequences would be used for all networks, and an evaluation made. The artifact being a table with rows containing entries for networks and conditions that caused an accident, plus a discussion of the results, which would then \textbf{answer our research question} on \textbf{evaluation of self-driving cars using CNNs in the rain}. 

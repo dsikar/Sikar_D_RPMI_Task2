@@ -1,0 +1,45 @@
+% risk table cell coloring
+% Manchev is the only one to apply background colouring to cells with impact above a certain score
+
+% Colours
+% red {FF0000}
+% amber {FFBF00}
+% green {00FF00}
+
+% \cellcolor[HTML]{C0C0C0}
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{ |m{55mm}|m{3mm}|m{3mm}|m{5mm}|m{73mm}| } 
+\hline
+\textbf{Description} & \textbf{L} & \textbf{C} & \textbf{I} & \textbf{Mitigation} \\ \hline
+
+Final prototype fails & 3 & 5 & \cellcolor[HTML]{FF0000} 15 & Cry \\ \hline
+Report is not long enough & 2 & 5 & \cellcolor[HTML]{FFBF00} 10 & Append suicide note \\ \hline
+
+% Loss of data
+Loss of data, personal devices
+% Scores
+& 1 & 5 & \cellcolor[HTML]{00FF00} 5 &
+% Mitigation
+Claim on home insurance \\ \hline
+%Keep source code repository on github.com, project report on overleaf.com 
+%and data on aws.amazon.com
+
+%% Real world images
+% Description
+Cannot input real world image sequences into networks
+& 1 & 5 & \cellcolor[HTML]{00FF00} 5 &
+% Mitigation
+Use computer generated sequences only \\ \hline
+
+%% Rainy images
+% Description
+Cannot source rain image sequences
+& 2 & 5 & \cellcolor[HTML]{FFBF00} 10 &
+% Mitigation
+Use augmented rain image sequences only \\ \hline
+\end{tabular}
+\end{center}
+\caption{Risk register}
+\label{table:risk_table}
+\end{table}
