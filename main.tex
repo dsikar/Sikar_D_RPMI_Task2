@@ -43,6 +43,9 @@
 \usepackage{lipsum}
 \usepackage{hyperref}
 
+% let's try this, so references start on separate page
+\flushbottom
+
 % For ethics pdf form insertion
 % Will stitch online, better result
 % https://pdfjoiner.com/
@@ -56,7 +59,7 @@
 \title{%
   Evaluation of self-driving cars using CNNs in the rain \\
   \medskip
-  \large INM363 Individual Project\\
+  \large Individual Project Proposal\\
     Daniel Sikar - MSc Data Science PT2\\
     Supervisor: Artur Garcez 
     }
@@ -121,6 +124,14 @@
 
 % References in separate page
 \pagebreak
+%% perhaps this is incompatible with harvard style referencing
+%% what we are hoping with \bibliographystyle{ama} is to generate
+%% a reference list such as https://arxiv.org/pdf/1910.07738.pdf
+%% where the references are number in the same order they appear 
+%% in text, i.e. the order is unlikely to be alphabetical, and
+%% makes following the references much easier than the alphabetical
+%% structure
+%% \bibliographystyle{ama}
 \printbibliography
 \pagebreak
 

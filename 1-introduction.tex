@@ -1,66 +1,15 @@
-%% Mache
-
 \section{Introduction}
+\label{introduction}
+Land vehicles that can drive autonomously, without human intervention, have been increasingly researched in the last 4 decades, harnessing the development in computer hardware, where decreasing size and increasing computational power allow such vehicles to carry mobile computing systems capable of performing the signal and algorithmic processing required to successfully self-drive along a path. Parallel to this development, improvements in one area of research in artificial intelligence (AI) known as machine learning has generated models known as convolutional neural networks (CNNs), successfully applied to the field of computer vision, where current state-of-the-art technology has surpassed human accuracy. Computer vision is a core component of self-driving, which relies heavily on images. 
 
-Land vehicles that can drive autonomously without human intervention, have shown increased research activity in the last 4 decades, harnessing the development in computer hardware, where decreasing size and increasing computational power allows such vehicles to carry mobile computing systems capable of performing the signal and algorithmic processing required to successfully self-drive along a path.
-  
-From the early Stanford Cart, a camera-equipped roving robot, with a remote time-sharing computer as its "brain", and "taking about five hours to navigate a 20 meter course" (\cite{3899}) to the current Tesla fleet with millions of accumulated self-driven miles (\cite{citation needed}). self-driving cars are an increasing presence on public roads. In California, self-driving buses have been in use since 2017 (\cite{Citation Needed}).
+From the Stanford Cart, a camera-equipped roving robot, with a remote time-sharing computer as its "brain", and "taking about five hours to navigate a 20 meter course" (\cite{3899}) to the current Tesla fleet with billions of accumulated self-driven miles (\cite{AIFSD:2020}), self-driving cars are an increasing presence on public roads.
 
-Automakers such as Tesla, Nissan, Audi, General Motors, BMW, Ford, Honda, Toyota, Mercedes and Volkswagen, and technology companies such as Apple, Google, NVidia and Intel, are currently involved in research. (\cite{app10082749}).
+Automakers such as Tesla, Nissan, Audi, General Motors, BMW, Ford, Honda, Toyota, Mercedes and Volkswagen, and technology companies such as Apple, Google, NVidia and Intel, are currently researching self-driving vehicles (\cite{app10082749}). This involves a number of tasks related to decision-making and resulting motion control: path planning, scene classification, obstacle detection, lane recognition, pedestrian detection, traffic signage detection (including traffic lights). 
+Reliability of self-driving cars under changing weather conditions is one important factor, considered since the earlier days of research (\cite{3899}). 
 
-Over time, dedicated self-driving compute platforms were developed by companies such as Intel subsidiary MobileEye, NVIDIA and Tesla. \cite{NVIDIA}. All three platforms have custom-designed processors, optimised for artificial intelligence (AI) computing, as well as dedicated inputs to process camera, radar (to measure object proximity with radio waves) and sonar (to measure object proximity with sound waves) data.
+Intel subsidiary MobileEye, NVIDIA and Tesla have developed, and continue to develop dedicated self-driving compute platforms, EyeQ, NVIDIA DRIVE AGX and HW respectively. All three platforms have custom-designed processors, optimised for AI computing. Dedicated inputs receive camera data, and sensor data to measure object proximity, using a combination of radar, sonar and lidar (radio, sound and light waves respectively). These inputs translate into three-dimensional position and orientation information used for path planning.
+Tesla has used both MobileEye and NVIDIA platforms, before developing its own (\cite{wiki:TeslaAutopilot}).
 
-Elon Musk, co-founder and CEO of Tesla, with respect to self-driving cars states that  "(...) right now AI and Neural Nets are used really for object recognition (...), identifying objects in still frames and tying it together in a perception path planning layer thereafter. (...) Over time I would expect that it moves really to (...) video in, car steering and pedals out" (\cite{TESLAADE:2019}).
+Elon Musk, co-founder and CEO of Tesla, with respect to self-driving cars states that  "(...) right now AI and Neural Nets are used really for object recognition (...), identifying objects in still frames and tying it together in a perception path planning layer thereafter. (...) Over time I would expect that it moves really to (...) video in, car steering and pedals out" (\cite{TESLAADE:2019}).  
 
-
-
-
-NVIDIA DRIVE AGX self-driving compute platforms are built on NVIDIA Xavier™, the world’s first processor designed for autonomous driving. The auto-grade Xavier system-on-a-chip (SoC) is in production today and architected for safety, incorporating six different types of processors to run redundant and diverse algorithms for AI, sensor processing, mapping and driving. Leveraging Xavier, DRIVE AGX platforms process data from camera, lidar, radar, and ultrasonic sensors to understand the complete 360-degree environment in real-time, localize itself to a map, and plan a safe path forward.
-
-https://www.nvidia.com/en-gb/self-driving-cars/drive-platform/hardware/
-
-
-
-
-A Convolutional Neural Network (CNN) is a class of Artificial Neural Network (ANN) that has enjoyed recent success with state-of-the-art performance in tasks such as natural language processing (NLP), image classification. The alternative approach being networks that make use of feature engineering, also known as feature extraction, 
-
-\textbf{The purpose of the project is to determine...}  
-TODO add text to refer to what I intend to obtain from this work.
-
-Reliability under changing weather conditions is an issue that has been considered since the beginning of research on autonomous vehicles (\cite{3899}).  
-
-The introduction of representational learning by back-propagating errors (\cite{Rumelhart:1986we}) opened a whole new can of worms, and a few pandora boxes to go with it.
-
-The big game changer was this guy (\cite{Pomerleau93knowledge-basedtraining}) who did the business. But then he upped the game (\cite{6796843}). Then, Jesus Christ, Pomerleau wants to do it all on his on (\cite{Jochem-1996-16257}).
-
-But the "drive across America" did not actually use the end-to-end approach (\cite{528333}
-
-But then these NVIDIA guys (\cite{journals/corr/BojarskiTDFFGJM16}) really messed things up.
-
-There is a belief that self driving cars will be able to eventually generate a safer driving experience with respect to manually controlled cars by drunken humans on facebook. (\cite{Dingus201513271}).  
-
-The measure safety testing, such as rate of success/failure of our algorithm will be given by a method that we need to research (injuries/fatalities per miles). How many miles do we need to accumulate. These guys (Kalra, Nidhi and Susan M. Paddock, Driving to Safety:) offered some metrics.
-Here is the discussion:   
-How Many Miles of Driving Would It Take to Demonstrate Autonomous Vehicle Reliability?
-
-Then we can look at this stackoverflow discussion for some metrics:
-
-https://stats.stackexchange.com/questions/73645/how-do-you-derive-the-success-run-theorem-from-the-traditional-form-of-bayes-the
-
-Then specifically at Lecture 23 for 
-
-% youtube vid with some of previous references https://www.youtube.com/watch?v=yaYER2M8dcs
-% jupyter notebook with explainable graphs
-% https://github.com/stephencwelch/self_driving_cars
-% Miles required to validate model are computationally unfeasible to generate
-
-% end to end x semantic abstraction
-% corner events
-Also, it would be good to have some measure of explainability such as proposed by 
-\cite{Zeiler:2014}
-
-These guys looked at poisoning the data (\cite{bansal2018chauffeurnet}).
-
-\subsubsection{Introduction 2.0}
-
-%% Last Paragraph, what Elon Musk said
+Based on this scenario, our \textbf{research question} is how do different CNN architectures compare in the rain, the \textbf{purpose of this research} is "to find evidence to inform practice" (\cite{Oates:2006}) on autonomous vehicles transitioning to a CNN and computer-vision-only  solution. The \textbf{product of this research} is an evaluation and the \textbf{intended beneficiary} is primarily the author, hoping this work will create academic and professional opportunities, as well as anyone else researching in the area that may use this work as a stepping stone or starting point.

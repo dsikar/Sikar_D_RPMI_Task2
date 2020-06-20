@@ -1,65 +1,22 @@
 \subsection{Data \& Tools}
 
-We identified 4 datasets, three based on real word images, and one based on computer-generated images.
+We identified 4 image datasets, 3 environments to train and test our models, and one image labelling crowdsourcing tool, to find relevant "rainy" sections in our data.
 
-\subsubsection{Ford Multi-AV Seasonal Dataset}
-The Ford Multi-AV Seasonal Dataset (\cite{agarwal2020ford}) is a multi-sensor dataset collected by a fleet of Ford autonomous vehicles at different days and times during 2017-18. The vehicles were manually driven on an average route of 66 km that included a mix of driving scenarios like city-centres, university campus and suburban neighbourhood, etc. Each vehicle used in this data collection is a Ford Fusion outfitted with an Applanix POS-LV inertial measurement unit (IMU), four HDL-32E Velodyne 3D-lidar scanners, 6 Point Grey 1.3 MP Cameras arranged on the rooftop for 360 degree coverage and 1 Pointgrey 5 MP camera mounted behind the windsheild for forward field of view. We present the seasonal variation in weather, lighting, construction and traffic conditions experienced in dynamic urban environments. This dataset can help design robust algorithms for autonomous vehicles and multi-agent systems. Each log in the dataset is time-stamped and contains raw data from all the sensors, calibration values, pose trajectory, ground truth pose, and 3D maps. All data is available in Rosbag format that can be visualized, modified and applied using the open-source Robot Operating System (ROS).
+The \textbf{Ford Multi-AV Seasonal Dataset} is a multi-sensor dataset collected by a fleet of Ford autonomous vehicles at different days and times during 2017-18. They contain inertial measurement units (IMU) that provide orientation which are our required steering angles.
 
-\subsubsection{Audi dataset}
+The \textbf{Audi dataset} provides 40,000 frames with semantic segmentation image and point cloud labels, of which more than 12,000 frames also have annotations for 3D bounding boxes. In addition, sensor data (approx. 390,000 frames) for sequences with several loops, recorded in three cities. The data need to be evaluated for steering angle labels
 
-The Audi dataset (\cite{(Audi 2019)}provides 40,000 frames with semantic segmentation image and point cloud labels, of which more than 12,000 frames also have annotations for 3D bounding boxes. In addition, sensor data (approx. 390,000 frames) for sequences with several loops, recorded in three cities.
+The \textbf{KITTI dataset} and benchmarks for computer vision research in the context of autonomous driving. The dataset has been recorded in and around the city of Karlsruhe, Germany using the mobile platform AnnieWay and has IMU labels.
 
-Semantic segmentation
-The dataset features 41,280 frames with semantic segmentation in 38 categories. Each pixel in an image is given a label describing the type of object it represents, e.g. pedestrian, car, vegetation, etc.
-
-Point cloud segmentation
-Point cloud segmentation is produced by fusing semantic pixel information and LiDAR point clouds. Each 3D point is thereby assigned an object type label. This relies on accurate camera-LiDAR registration.
-
-3D bounding boxes
-c3D bounding boxes are provided for 12,499 frames. LiDAR points within the field of view of the front camera are labelled with 3D bounding boxes. We annotate 14 classes relevant to driving, e.g. cars, pedestrians, buses, etc.
-
-\subsubsection{KITTI dataset}
-
-Dataset and benchmarks for computer vision research in the context of autonomous driving. The dataset has been recorded in and around the city of Karlsruhe, Germany using the mobile platform AnnieWay (VW station wagon) which has been equipped with several RGB and monochrome cameras, a Velodyne HDL 64 laser scanner as well as an accurate RTK corrected GPS/IMU localization unit. The dataset has been created for computer vision and machine learning research on stereo, optical flow, visual odometry, semantic segmentation, semantic instance segmentation, road segmentation, single image depth prediction, depth map completion, 2D and 3D object detection and object tracking. In addition, several raw data recordings are provided. The datasets are captured by driving around the mid-size city of Karlsruhe, in rural areas and on highways. Up to 15 cars and 30 pedestrians are visible per image.
-
-\subsubsection{Udacity self-driving datasets}
-
-This resource contains two datasets of interest, with IMU values (therefore labelled) (udacity citation https://github.com/udacity/self-driving-car/tree/master/datasets)
-
-LiDAR
-
-Lidar, which stands for Light Detection and Ranging, is a remote sensing method that uses light in the form of a pulsed laser to measure ranges (variable distances) to the Earth.
-
-Radar uses radio waves to determine the range
-10 Hz rotation rate
+The \textbf{Udacity self-driving datasets} two datasets of interest, containing labeled images with IMU and lidar values.
 
 
+We intend to locate segments where rain is present with crowdsourcing \textbf{Amazon Mechanical Turk}. The expected outcome of this step is at least dozens of sequences containing rain.
 
-KITTI Vision Benchmark Suite
-
-UnrealDataset dataset.
-KITTI dataset
-
-
-
-DUSD dataset
-
-We also intend to use AWS Mechanical Turk to find and narrow down sequences containing rain.
-
-\lipsum[8]
-
-Toolsets include the NVIDIA DRIVE Constellation
-
-https://developer.nvidia.com/drive/drive-constellation
-
-Three environments have been identified to run CNN training and testing: the Intel DevCloud, as offered by the Intel AI Developer Program, DRIVE Sim, from the NVidia open DRIVE Constellation platform, which enables developers to design and implement simulations, including a variety of road and weather conditions, for the development of autonomous vehicles.
-The Udacity Self-Driving Car Simulator
-\lipsum[9]
-
-%%  Natural data
-We intend to gather traffic image data from the Audi, <the other one> an VW datasets. These are labelled datasets, where a steering angle is provided with every image. We intend to locate segments where rain is present. We expect to require the use of crow sourcing tools such as Amazon Mechanical Turk to locate such segments, as the datasets are quite large.
-The expected outcome of this step is at least dozens of sequences containing rain.
-
-%% Synthetic data
 We intend to use data augmentation to create synthetic data, with properties that would emulate rain characteristics, such as superimposing rain drops to images, then adding effects such as blurring, reflection and diffusion.  
 The expected outcome of this step is at least dozens of sequences containing the augmented data plus metadata indicating the level of each applied effect.
+
+Three environments have been identified to run CNN training and testing: the \textbf{Intel DevCloud}, the \textbf{NVidia open DRIVE Constellation} platform, and the the \textbf{Udacity Self-Driving Car Simulator}. 
+
+For initial network design we have identified \textbf{PyTorch}, \textbf{Keras} (Python Tensorflow wrapper) and \textbf{MATLAB} toolkits as potential tools.
+

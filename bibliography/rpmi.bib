@@ -48,7 +48,7 @@
  title = {Researching information systems and computing},
  year = {2006},
 % isbn = {0273721313, 9780273721314}, parsing error
- isbn = {9781446235447, 9781446203620, 1446235440, 144620362X},
+ isbn = {9781446235447},
  edition = {1st},
  publisher = {SAGE Publications},
 } 
@@ -189,7 +189,17 @@ DOI = {10.3390/app10082749}
 author = {Musk, Elon},
 title = {{TESLA Autonomy Day Event}},
 year = {2019},
+urldate    =	{2020-05-01},
 URL = {https://www.youtube.com/watch?v=tbgtGQIygZQ&t=2h25m52s}
+}
+
+%% Karpathy - 3 billion autopilot miles accumulated
+@MISC{AIFSD:2020,
+author = {Karpathy, Andrej},
+title = {{AI for Full-Self Driving, Scale ML Conference}},
+year = {2020},
+urldate    =	{2020-05-01},
+URL = {https://www.youtube.com/watch?v=hx7BXih7zx8&t=1m30s}
 }
 
 %% NVIDIA
@@ -211,6 +221,20 @@ URL = {https://www.nvidia.com/en-gb/self-driving-cars/drive-platform/hardware/}
     primaryClass={cs.RO}
 }
 %% Audi
+@MISC{AUDI,
+author = {Audi},
+title = {Audi Dataset},
+retrieved = {07.05.2019},
+URL = {https://www.a2d2.audi/a2d2/en/dataset.html}
+}
+
+%% Udacity
+@MISC{UDACITY,
+author = {Udacity},
+title = {Udacity Dataset},
+retrieved = {07.05.2019},
+URL = {https://github.com/udacity/self-driving-car/tree/master/datasets}
+}
 
 %% KITTI
 @ARTICLE{Geiger2013IJRR,
@@ -220,4 +244,105 @@ URL = {https://www.nvidia.com/en-gb/self-driving-cars/drive-platform/hardware/}
   year = {2013}
 }
 
+%% Garcez
+@MISC{Garcez,
+  author = {Artur Garcez},
+  title = {INM427 Neural Computing Lecture Notes},
+  year = {2018}
+}
+
+%% PAUWELS
+@MISC{Pauwels,
+  author = {Johan Pauwels and Weyde, Tillman},
+  title = {INM378 Digital Signal Processing and Audio Processing Lecture Notes},
+  year = {2020}
+}
+
+%% Testa Autopilot - wikipedia 
+%% We use this quote to contextualise Tesla's use of third-party self-drive platforms, before developing its own
+ @misc{ wiki:TeslaAutopilot,
+   author = "{Wikipedia contributors}",
+   title = "Tesla Autopilot",
+   year = "2020",
+   url = "https://en.wikipedia.org/wiki/Tesla_Autopilot",
+   note = "[Online; accessed 02-May-2020]"
+ }
+
+%% Alexnet
+@incollection{NIPS2012_4824,
+title = {ImageNet Classification with Deep Convolutional Neural Networks},
+author = {Alex Krizhevsky and Sutskever, Ilya and Hinton, Geoffrey E},
+booktitle = {Advances in Neural Information Processing Systems 25},
+editor = {F. Pereira and C. J. C. Burges and L. Bottou and K. Q. Weinberger},
+pages = {1097--1105},
+year = {2012},
+publisher = {Curran Associates, Inc.}
+}
+% got rid or url to make it f
+% ,url = {http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf}
+
+%% GoogleLeNet
+@inproceedings{GoogleLeNet:43022,
+title	= {Going Deeper with Convolutions},
+author	= {Christian Szegedy and Wei Liu and Yangqing Jia and Pierre Sermanet and Scott Reed and Dragomir Anguelov and Dumitru Erhan and Vincent Vanhoucke and Andrew Rabinovich},
+year	= {2015},
+URL	= {http://arxiv.org/abs/1409.4842},
+booktitle	= {Computer Vision and Pattern Recognition (CVPR)}
+}
+
+%% RESNET
+@misc{RESNET:he2015deep,
+    title={Deep Residual Learning for Image Recognition},
+    author={Kaiming He and Xiangyu Zhang and Shaoqing Ren and Jian Sun},
+    year={2015},
+    eprint={1512.03385},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
+
+%% VGGNET
+@InProceedings{VGGNET:Simonyan15,
+  author       = "Karen Simonyan and Andrew Zisserman",
+  title        = "Very Deep Convolutional Networks for Large-Scale Image Recognition",
+  booktitle    = "International Conference on Learning Representations",
+  year         = "2015",
+}
+
+% Fukushima
+@article{fukushima:neocognitronbc,
+  added-at = {2008-03-11T14:52:34.000+0100},
+  author = {Fukushima, Kunihiko},
+  biburl = {https://www.bibsonomy.org/bibtex/29ecd878c4827c46dab6b9622cfa00072/idsia},
+  citeulike-article-id = {2376719},
+  interhash = {303975e6400e477e91c91e7dc2c47544},
+  intrahash = {9ecd878c4827c46dab6b9622cfa00072},
+  journal = {Biological Cybernetics},
+  keywords = {nn},
+  pages = {193--202},
+  priority = {2},
+  timestamp = {2008-03-11T15:04:22.000+0100},
+  title = {{N}eocognitron: {A} Self-Organizing Neural Network Model for a Mechanism of Pattern Recognition Unaffected by Shift in Position},
+  volume = 36,
+  year = 1980
+}
+
+%% lecun
+@INPROCEEDINGS{Lecun98gradient-basedlearning,
+    author = {Yann Lecun and Léon Bottou and Yoshua Bengio and Patrick Haffner},
+    title = {Gradient-based learning applied to document recognition},
+    booktitle = {Proceedings of the IEEE},
+    year = {1998},
+    pages = {2278--2324}
+}
+
+@incollection{NIPS1988_95,
+title = {ALVINN: An Autonomous Land Vehicle in a Neural Network},
+author = {Pomerleau, Dean A.},
+booktitle = {Advances in Neural Information Processing Systems 1},
+editor = {D. S. Touretzky},
+pages = {305--313},
+year = {1989},
+publisher = {Morgan-Kaufmann},
+url = {http://papers.nips.cc/paper/95-alvinn-an-autonomous-land-vehicle-in-a-neural-network.pdf}
+}
 

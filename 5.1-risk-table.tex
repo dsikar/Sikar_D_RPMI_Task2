@@ -7,37 +7,71 @@
 % green {00FF00}
 
 % \cellcolor[HTML]{C0C0C0}
-\begin{table}[ht]
+\begin{table}[h]
 \begin{center}
 \begin{tabular}{ |m{55mm}|m{3mm}|m{3mm}|m{5mm}|m{73mm}| } 
 \hline
 \textbf{Description} & \textbf{L} & \textbf{C} & \textbf{I} & \textbf{Mitigation} \\ \hline
 
-Final prototype fails & 3 & 5 & \cellcolor[HTML]{FF0000} 15 & Cry \\ \hline
-Report is not long enough & 2 & 5 & \cellcolor[HTML]{FFBF00} 10 & Append suicide note \\ \hline
-
-% Loss of data
-Loss of data, personal devices
+% Insufficient knowledge
+Insufficient domain knowledge
 % Scores
-& 1 & 5 & \cellcolor[HTML]{00FF00} 5 &
+& 2 & 4 & \cellcolor[HTML]{FFBF00} 8 &
 % Mitigation
-Claim on home insurance \\ \hline
-%Keep source code repository on github.com, project report on overleaf.com 
-%and data on aws.amazon.com
-
-%% Real world images
-% Description
-Cannot input real world image sequences into networks
-& 1 & 5 & \cellcolor[HTML]{00FF00} 5 &
-% Mitigation
-Use computer generated sequences only \\ \hline
+Extend scope for literature survey and toolset selection and decrease scope for alternative models \\ \hline
 
 %% Rainy images
 % Description
 Cannot source rain image sequences
-& 2 & 5 & \cellcolor[HTML]{FFBF00} 10 &
+& 1 & 5 & \cellcolor[HTML]{00FF00} 5 &
 % Mitigation
 Use augmented rain image sequences only \\ \hline
+
+% No additional networks
+Unable to replicate NVIDIA CNN model
+% Scores
+& 2 & 3 & \cellcolor[HTML]{FFBF00} 6 &
+% Mitigation
+Use Udacity Unity engine as a new starting point\\ \hline
+
+% Sequence learning
+Sequence learning approach does not work or is too complex to implement.
+% Scores
+& 2 & 4 & \cellcolor[HTML]{FFBF00} 8 &
+% Mitigation
+Use single labelled image as input \\ \hline
+
+% No additional networks
+Unable to create alternative models
+% Scores
+& 2 & 4 & \cellcolor[HTML]{FFBF00} 8 &
+% Mitigation
+Use NVIDIA CNN only, comparing ground truth "dry" with "rainy" data \\ \hline
+
+% Loss of data
+Accidental loss of data.
+% Scores
+& 2 & 5 & \cellcolor[HTML]{FF0000} 10 &
+% Mitigation
+Keep all source code, reporting and data online (github.com, overleaf.com, aws.amazon.com, camber.city.ac.uk and devcloud.intel.com) \\ \hline
+%Keep source code repository on github.com, project report on overleaf.com 
+%and data on aws.amazon.com
+
+%% COVID
+% Description
+Continued COVID-19 lockdown disruption
+& 2 & 3 & \cellcolor[HTML]{FFBF00} 6 &
+% Mitigation
+Scale down project \\ \hline
+
+% Report writing overruns
+Final report delay 
+% Scores
+& 2 & 5 & \cellcolor[HTML]{FF0000} 10 & 
+% Mitigation
+One additional week has been added for contingency \\ \hline
+
+
 \end{tabular}
 \end{center}
 \caption{Risk register}

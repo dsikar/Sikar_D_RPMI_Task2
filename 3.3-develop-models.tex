@@ -1,0 +1,25 @@
+\subsection{Develop Models}
+
+% explanation on how these models differ
+%% https://towardsdatascience.com/the-w3h-of-alexnet-vggnet-resnet-and-inception-7baaaecccc96 
+
+%% Notes on inception designs
+%% https://datascience.stackexchange.com/questions/15328/what-is-the-difference-between-inception-v2-and-inception-v3
+
+Our data consists of videos, taken by cameras mounted on moving vehicles, which can be interpreted as sequences of still images taken at fixed-time intervals. Each still image is labelled with a quantity we call $\theta$, that represents a direction from 0 to 359 degrees, in which the vehicle was travelling at the moment the image was stored. $\Delta \theta$ between two images, taken at intervals $i$ and $i+n$, represents the amount of steering that was applied to the vehicle after n intervals. Therefore the assumption is we are dealing with a regression problem, where, given a sequence of images as described, we want our models to approximate $\theta$, keeping the autonomous vehicle on the road.
+
+Our starting point is the NVIDIA CNN (Figure \ref{fig:nvidia_cnn}) model. Thereafter we expect to implement a number of alternative models to evaluate individually and compare to each other. 
+The alternative models we are looking to implement are:  
+
+% https://medium.com/analytics-vidhya/cnns-architectures-lenet-alexnet-vgg-googlenet-resnet-and-more-666091488df5
+
+\textbf{AlexNet} - five convolutional layers, some of which are followed by max-pooling layers, and three fully-connected layers with a final 1000-way softmax. To reduce overfitting in the fully-connected, dropout is used as a regularization method (\cite{NIPS2012_4824}).  
+
+\textbf{VGGNet} -  implementation showing increased depth up to 16-19 weight layers can be achieved by using an architecture with very small (3 x 3) convolution filters (\cite{VGGNET:Simonyan15}).
+
+\textbf{Inception-v1, Inception-v2, Inception-v3} - variations of a deep convolutional neural network architecture, one implementation being GoogleLeNet, using the Network-in-Network approach in order to increase the representational power of
+neural networks, 1 x 1 convolutional layers are added to the network, acting as dimension reduction modules to remove computational bottlenecks, that would otherwise limit the size of the network. This allows for not
+just increasing the depth, but also the width of the network
+without a significant performance penalty (\cite{GoogleLeNet:43022}). 
+
+\textbf{ResNet} - residual learning framework to optimize training of networks, where layers are reformulated as learning residual functions with reference to the layer inputs, instead of learning unreferenced functions (\cite{RESNET:he2015deep}).
